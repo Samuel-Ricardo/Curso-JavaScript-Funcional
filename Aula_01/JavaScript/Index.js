@@ -19,9 +19,9 @@ console.log('oi 2')
 
 //////////////////////////////////////////////////////////////////////////////////*/
 
-// Exemplo de funções de primeira classe  //  Example of first class functions //
+/*// Exemplo de funções de primeira classe  //  Example of first class functions //
 
-// funçoes se tornam um tipo de dado e podem ser armazenado em variaveis;
+// funçoes se tornam um tipo de dado e podem ser armazenado em variaveis // functions become a data type and can be stored in variables  //
 
 
 const getName = function () {
@@ -33,4 +33,21 @@ getName();
 
 
 //////////////////////////////////////////////////////////////////////////////////
+*/
 
+// Exemplo de funções Call Back  //  Example of Call Back functions //
+
+// funçoes que recebem / podem receber outras funçoes como parametro  //  functions that receive / can receive other functions like parameter  //
+
+
+const loading = setInterval(function(){
+    console.log('loading...');
+}, 500)
+
+setTimeout(function(){
+    clearInterval(loading)
+    console.log('loaded')
+},3000)
+
+
+//////////////////////////////////////////////////////////////////////////////////
