@@ -1,0 +1,17 @@
+{
+    "name": "TS",
+    "version": "1.0.0",
+    "description": "",
+    "main": "Index.ts",
+    "scripts": {
+        "dev": "ts-node Index.ts",
+        "test": "echo \" Error: no test especified \" && exit 1"
+    },
+    "keywords": [],
+    "author": "Samuel Ricardo",
+    "license": "ISC",
+    "devDependecies": {
+        "ts-node": "^8.1.0",
+        "typescript": "^3.4.5"
+    }
+}
