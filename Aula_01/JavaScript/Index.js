@@ -24,19 +24,12 @@ console.log('oi 2')
 // funçoes se tornam um tipo de dado e podem ser armazenado em variaveis;
 
 
-setTimeout(function() {
-    console.log("oi 1")
-}, 5000)
+const getName = function () {
 
-const myFunction = function () {
-    console.log("oi 3")
+    console.log('Felipe')
 }
 
-setTimeout(myFunction, 5000)
-
-console.log('oi 2')
-
-
+getName();
 
 
 //////////////////////////////////////////////////////////////////////////////////
