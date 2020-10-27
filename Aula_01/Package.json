@@ -1,0 +1,13 @@
+{
+    "name": "JS-ES6",
+    "version": "1.0.0",
+    "description": "",
+    "main": "Index.js",
+    "scripts": {
+        "dev": "node Index.js",
+        "test": "echo \" Error: no test especified \" && exit 1"
+    },
+    "keywords": [],
+    "author": "Samuel Ricardo",
+    "license": "ISC" 
+}
