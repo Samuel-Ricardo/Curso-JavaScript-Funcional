@@ -10,7 +10,7 @@
     "keywords": [],
     "author": "Samuel Ricardo",
     "license": "ISC",
-    "devDependecies": {
+    "devDependencies": {
         "ts-node": "^8.1.0",
         "typescript": "^3.4.5"
     }
