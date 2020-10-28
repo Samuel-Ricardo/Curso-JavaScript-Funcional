@@ -53,19 +53,49 @@ setTimeout(function(){
 //////////////////////////////////////////////////////////////////////////////////
 */
 
-// Exemplo de funções Call Back  //  Example of Call Back functions //
+// Exemplo de Arrow Functions  //  Example of Arrow Functions //
 
-// funçoes que recebem / podem receber outras funçoes como parametro  //  functions that receive / can receive other functions like parameter  //
+//  são na verdade um resumo da sintaxe de uma função, sendo capaz de resumir uma função em 1 linha por exemplo  //  are actually a syntax summary of a function, being able to summarize a function in 1 line for example // functions that receive  //
 
 
-const loading = setInterval(function(){
-    console.log('loading...');
-}, 500)
+const test = () => {return console.log("1")}
+const test = () => console.log("1")     //  se for apenas 1 linha de código pode ser feita dessa maneira e ele automáticamente retorna o resultado  //  if it is, only 1 line can be made this way, and it automatically returns the result  //
 
-setTimeout(function(){
+setTimeout(test, 1000)
+
+console.log(2)
+
+//-------------------------------------------------------------------------------------------------//
+
+const loading = setInterval( () => console.log('loading...'), 500)
+
+//  Como este possui mais de 1 linha deverá ser feito desta forma  //  As it has more than 1 line it should be done this way  //
+
+setTimeout(() => { 
     clearInterval(loading)
     console.log('loaded')
 },3000)
 
+//-------------------------------------------------------------------------------------------------//
+
+// 1º Maneira // 1º way //
+
+const message = function(name) {
+    return "Hello" + name
+}
+
+console.log ('Felipe') 
+
+// 2º Maneira // 2º way //
+
+const message =  name => "Hello" + name
+
+console.log ('Felipe') 
+
+//-------------------------------------------------------------------------------------------------//
+
+const som = (x, y) => x + y
+
+console.log(som(4, 7))
 
 //////////////////////////////////////////////////////////////////////////////////
