@@ -154,11 +154,9 @@ console.log(pureSum(10, 5))
 */
 
 
-//-------------------------------------------------------------------------------------------------//
-//----------------------------------------------REST-----------------------------------------------//
-//-------------------------------------------------------------------------------------------------//
+// REST
 
-// Pode Receber uma quantidade variavel e/ou infinita de parametros, transformando a variavel em um array com os valores
+// Pode Receber uma quantidade variavel e/ou infinita de parametros, transformando a variavel em um array com os
 
 function sum (... num) {  
 
@@ -172,3 +170,25 @@ function sum (... num) {
 }
 
 console.log(sum(1,10,20,4))
+
+
+//SPREAD
+
+const person = {
+    name: 'Felipe',
+    age: 14
+}
+
+// pode herdar e/ou sobrescrever os atributos e valores do objeto person
+
+const person2 = {  
+    ...person,
+    sobreNome: 'pietro',
+}
+
+console.log(person2)
+
+const numbers = [1,5,4,8,9]
+const numbers2 = [...numbers,2,3] //mesclar os array
+
+console.log(numbers2)
