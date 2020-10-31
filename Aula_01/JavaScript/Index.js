@@ -303,7 +303,13 @@ const stop_2 = function(time){  //FUNCTION
 stop_2.(3000).then(message => console.log(message)).catch(error => console.log(' ERR: ', error))
 //-------------------------------------------------------------------------------------------------//
 
+//-------------------------------------------------------------------------------------------------//
+// vai executar todas as promisses e exebir uma mensagem quando terminar todas as execuçoes
+//-------------------------------------------------------------------------------------------------//
 
+Promise.all([stop_1,
+            stop_2(1000)]).then(() => console.log('All Promises comleted'))
+            .catch(error => console.log(error))
 
 
 
