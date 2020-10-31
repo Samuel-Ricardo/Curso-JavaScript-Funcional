@@ -20,11 +20,9 @@
 
         <div class = "container">
 
-            <ul class="repos-list">
-                <li>Repo 1: </li>
-                <li>Repo 1: </li> 
+     
                 <span id="repos"></span>
-            </ul>
+    
         </div>
 
         <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
@@ -62,22 +60,22 @@
 
             return (
 
-                <>
+                <ul className = "repos-list">
                     {
                         repos.map(repo => {
+                            return(
+                                    <li key ={repo.id}>
+                                        
+                                        {repo.name}: <a href={repo.html_url} target = {"_blank"}>{repo.html_url}</a>
 
-                                <li key ={repo.id}>
-                                    
-                                    {repo.name}: {repo.html_url}
-
-                                </li>
-                            })
+                                    </li>
+                                )}
+                            )
                     }
                     
-                </>
-
+                </ul>
             )
-          }
+        }
 
           ReactDOM.render(<App/>, document.getElementById('repos'))
         </script>
