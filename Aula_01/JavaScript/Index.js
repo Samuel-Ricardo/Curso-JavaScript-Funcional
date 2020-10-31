@@ -151,10 +151,10 @@ console.log(pureSum(10, 5))
 //-------------------------------------------------------------------------------------------------//
 //  It can be noted that regardless of the order in which the functions are executed, the result of one will not influence the other, thus having the expected results (Ex: 10 + 5 = 15) //
 //-------------------------------------------------------------------------------------------------//
-*/
 
 
-// REST
+//-------------------------------------------------------------------------------------------------//
+//REST//
 
 //  Pode Receber uma quantidade variavel e/ou infinita de parametros, transformando a variavel em um array com os valores // Can receive a variable and/or infinite number of parameters, transforming the variable into an array with the values //
 
@@ -170,9 +170,8 @@ function sum (... num) {
 }
 
 console.log(sum(1,10,20,4))
-
-
-//SPREAD
+//-------------------------------------------------------------------------------------------------//
+//SPREAD//
 
 const person = {
     name: 'Felipe',
@@ -193,3 +192,22 @@ const numbers = [1,5,4,8,9]
 const numbers2 = [...numbers,2,3] //mesclar os array
 
 console.log(numbers2)
+//-------------------------------------------------------------------------------------------------//
+*/
+
+//MAP, FILTER & REDUCE
+
+const nums = [1,4,6,5,7,7,8,9,10]
+
+//MAP: Ele fará a varredura da matriz e cada vez que encontrar um índice, o MAP executará a função  //  It will scan the array and each time it finds an index the MAP performs the function  //
+
+//const newNums_1 = nums.map(function(num){
+//
+//    return num * 2;
+//})
+//
+//
+
+const newNums_1 = nums.map(num => num * 2)
+
+console.log(newNums_1)

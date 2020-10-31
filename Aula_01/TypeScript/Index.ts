@@ -130,7 +130,6 @@ console.log(pureSum(10, 5))
 //-------------------------------------------------------------------------------------------------//
 //  It can be noted that regardless of the order in which the functions are executed, the result of one will not influence the other, thus having the expected results (Ex: 10 + 5 = 15) //
 //-------------------------------------------------------------------------------------------------//
-*/
 
 //-------------------------------------------------------------------------------------------------//
 //REST//
@@ -186,3 +185,4 @@ const numbers2: number[] = [...numbers,2,3] //mesclar os array
 
 console.log(numbers2)
 //-------------------------------------------------------------------------------------------------//
+*/
