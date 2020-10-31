@@ -1,4 +1,7 @@
-/*// Exemplo de uso de funções simultâneas assíncronas  //  Example of using asynchronous simultaneous functions //
+/*
+
+
+// Exemplo de uso de funções simultâneas assíncronas  //  Example of using asynchronous simultaneous functions //
 
 
 
@@ -248,7 +251,12 @@ console.log(sum)
 
 
 //-------------------------------------------------------------------------------------------------//
-//PROMISE: executa um código de forma assincrona e quando a execuçao acabar ele retorna "reject"(erro) ou "resolve"(sucesso) 
+//PROMISE//: executa um código de forma assíncrona e quando a execução termina, ele retorna "reject"(erro) ou "resolve"(sucesso) 
+
+//PROMISE//: execute a code asynchronously and when the execution is finished it returns "reject" (error) or "resolve" (success)
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+// constrói algo que pode retornar algo no futuro ou não retornar nada, permitindo executar algo em simultâneo//
+// build something that can return something in the future or return nothing, allowing you to run something simultaneously //
 //-------------------------------------------------------------------------------------------------//
 const val = true
 //-------------------------------------------------------------------------------------------------//
@@ -304,7 +312,8 @@ stop_2(3000).then(message => console.log(message)).catch(error => console.log(' 
 //-------------------------------------------------------------------------------------------------//
 
 //-------------------------------------------------------------------------------------------------//
-// vai executar todas as promisses e exebir uma mensagem quando terminar todas as execuçoes
+// vai executar todas as promise e exebir uma mensagem quando terminar todas as execuçoes //
+// will execute all promises and display a message when all executions are finished //
 //-------------------------------------------------------------------------------------------------//
 
 Promise.all([stop_1,
@@ -313,7 +322,8 @@ Promise.all([stop_1,
 
 
 //-------------------------------------------------------------------------------------------------//
-// vai executar todas as promisses e exebir a mensagem da que terminar primeiro
+// vai executar todas as promise e exebir a mensagem da que terminar primeiro //
+// will execute all promises and display the message that finishes first //
 //-------------------------------------------------------------------------------------------------//
 
 Promise.race([
@@ -324,6 +334,10 @@ Promise.race([
 //-------------------------------------------------------------------------------------------------//
 */
 
+
+
+permitindo executar algo em simultâneo
+allowing you to run something simultaneously
 
 
 

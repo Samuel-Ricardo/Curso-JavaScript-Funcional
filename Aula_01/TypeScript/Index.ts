@@ -240,3 +240,82 @@ const sum:number = nums.reduce(
 console.log(sum)
 //-------------------------------------------------------------------------------------------------//
 */
+
+//-------------------------------------------------------------------------------------------------//
+//PROMISE//: executa um código de forma assíncrona e quando a execução termina, ele retorna "reject"(erro) ou "resolve"(sucesso) 
+//PROMISE//: execute a code asynchronously and when the execution is finished it returns "reject" (error) or "resolve" (success)
+//-------------------------------------------------------------------------------------------------//
+const val: boolean = true
+//-------------------------------------------------------------------------------------------------//
+
+const stop_1: Promise<string> = new Promise ((resolve,reject) => {  //OBJECT
+
+    setTimeout(()=>{
+
+            console.log(1)
+
+            if(!val){
+                reject("Erro")
+                return
+        }
+
+            setTimeout(()=>{
+
+                console.log(2)
+                resolve('Fim')
+            },2000)
+
+        },2000)
+
+})
+//-------------------------------------------------------------------------------------------------//
+stop_1.then(message => console.log(message)).catch(error => console.log(' ERR: ', error))
+//-------------------------------------------------------------------------------------------------//
+
+ function stop_2 (time: number): Promise<string>{  //FUNCTION
+
+    return new Promise((resolve,reject) =>{
+
+        setTimeout(()=>{
+
+            console.log(1)
+    
+            if(!val){
+                reject("Erro")
+                return
+            }
+    
+                setTimeout(()=>{
+        
+                    console.log(2)
+                    resolve('Fim')
+                },time)
+        
+            },2000)
+    })
+}
+//-------------------------------------------------------------------------------------------------//
+stop_2(3000).then(message => console.log(message)).catch(error => console.log(' ERR: ', error))
+//-------------------------------------------------------------------------------------------------//
+
+//-------------------------------------------------------------------------------------------------//
+// vai executar todas as promise e exebir uma mensagem quando terminar todas as execuçoes //
+// will execute all promises and display a message when all executions are finished //
+//-------------------------------------------------------------------------------------------------//
+
+Promise.all([stop_1,
+            stop_2(3000)]).then(() => console.log('All Promises comleted'))
+            .catch(error => console.log(error))
+
+
+//-------------------------------------------------------------------------------------------------//
+// vai executar todas as promise e exebir a mensagem da que terminar primeiro //
+// will execute all promises and display the message that finishes first //
+//-------------------------------------------------------------------------------------------------//
+
+Promise.race([
+    stop_1,
+    stop_2(3000)
+]).then(message => console.log('One Promise conpleted: '+ message))
+  .catch(error => console.log(error))
+//-------------------------------------------------------------------------------------------------//
