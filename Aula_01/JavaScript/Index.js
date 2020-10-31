@@ -246,3 +246,33 @@ const sum = nums.reduce((acumulator, number) => acumulator + number , 0)
 console.log(sum)
 //-------------------------------------------------------------------------------------------------//
 */
+
+//-------------------------------------------------------------------------------------------------//
+//PROMISE: executa um código de forma assincrona e quando a execuçao acabar ele retorna "reject"(erro) ou "resolve"(sucesso) 
+//-------------------------------------------------------------------------------------------------//
+
+const val = true
+
+const stop_1 = new Promise((resolve,reject) => {
+
+    setTimeout(()=>{
+
+        console.log(1)
+
+        if(!val){
+            reject("Erro")
+            return
+        }
+
+        setTimeout(()=>{
+
+            console.log(2)
+            resolve('Fim')
+        },2000)
+
+    },2000)
+
+})
+
+stop_1.then(message => console.log(message)).catch(error => console.log(' ERR: ', error))
+
