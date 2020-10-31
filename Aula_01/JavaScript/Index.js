@@ -98,7 +98,6 @@ const som = (x, y) => x + y
 console.log(som(4, 7))
 
 //////////////////////////////////////////////////////////////////////////////////
-*/
 
 // Exemplo de funções Puras e Impuras  //  Example of Pure and Impure functions //
 
@@ -152,3 +151,24 @@ console.log(pureSum(10, 5))
 //-------------------------------------------------------------------------------------------------//
 //  It can be noted that regardless of the order in which the functions are executed, the result of one will not influence the other, thus having the expected results (Ex: 10 + 5 = 15) //
 //-------------------------------------------------------------------------------------------------//
+*/
+
+
+//-------------------------------------------------------------------------------------------------//
+//----------------------------------------------REST-----------------------------------------------//
+//-------------------------------------------------------------------------------------------------//
+
+// Pode Receber uma quantidade variavel e/ou infinita de parametros, transformando a variavel em um array com os valores
+
+function sum (... num) {  
+
+    let result = 0;
+
+    for(var index = 0; index < num.length ; index++){
+
+        result += num[index]
+    }
+    return result
+}
+
+console.log(sum(1,10,20,4))
