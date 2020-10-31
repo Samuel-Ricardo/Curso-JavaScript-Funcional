@@ -33,21 +33,34 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
 
         <script type="text/babel">
-          
-          async function getRepos(){
 
-            try{
-                const response = await axios.get('https://api.github.com/users/Samuel-Ricardo/repos')
-                return response.data
-            }catch(error){
-                alert('Erro ao consultar API do GitHub: '+ error)
-                console.log('Erro ao consultar API do GitHub: '+ error)
+          function App(){
+
+            const [repos, setRepos] = React.useState([])
+
+            React.useEffect(() => {
+
+                getRepos()
+
+                .then(data => setRepos(data) )
+                .catch(error => {
+                        alert('Erro ao consultar API do GitHub: '+ error)
+                        console.log('Erro ao consultar API do GitHub: '+ error)
+                    })
+            })
+
+            async function getRepos(){
+
+                try{
+                    const response = await axios.get('https://api.github.com/users/Samuel-Ricardo/repos')
+                    return response.data
+                }catch(error){
+                    alert('Erro ao consultar API do GitHub: '+ error)
+                    console.log('Erro ao consultar API do GitHub: '+ error)
+                }
             }
+
           }
-
-          console.log(getRepos)
-
-          function App(){}
 
           ReactDOM.render(<App/>, document.getElementById('repos'))
         </script>
