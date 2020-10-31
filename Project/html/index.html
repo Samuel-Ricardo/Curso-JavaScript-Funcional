@@ -34,6 +34,19 @@
 
         <script type="text/babel">
           
+          async function getRepos(){
+
+            try{
+                const response = await axios.get('https://api.github.com/users/Samuel-Ricardo/repos')
+                return response.data
+            }catch(error){
+                alert('Erro ao consultar API do GitHub: '+ error)
+                console.log('Erro ao consultar API do GitHub: '+ error)
+            }
+          }
+
+          console.log(getRepos)
+
           function App(){}
 
           ReactDOM.render(<App/>, document.getElementById('repos'))
