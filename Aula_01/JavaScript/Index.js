@@ -193,13 +193,16 @@ const numbers2 = [...numbers,2,3] //mesclar os array
 
 console.log(numbers2)
 //-------------------------------------------------------------------------------------------------//
-*/
 
-//MAP, FILTER & REDUCE
+
+//-------------------------------------------------------------------------------------------------//
+//MAP // FILTER // REDUCE//
 
 const nums = [1,4,6,5,7,7,8,9,10]
 
+//-------------------------------------------------------------------------------------------------//
 //MAP: Ele fará a varredura da matriz e cada vez que encontrar um índice, o MAP executará a função  //  It will scan the array and each time it finds an index the MAP performs the function  //
+//-------------------------------------------------------------------------------------------------//
 
 //const newNums_1 = nums.map(function(num){
 //
@@ -212,24 +215,27 @@ const newNums_1 = nums.map(num => num * 2)
 
 console.log(newNums_1)
 
+//-------------------------------------------------------------------------------------------------//
 //FILTER: funciona da mesma forma que o MAP, porém, só retorna os valores que correspondem à condição, formando assim um filtro  //  it works in the same way as the MAP, however, it only returns the values ​​that match the condition, thus making a filter  //
+//-------------------------------------------------------------------------------------------------//
 
 const newNums_2 = nums.filter(num => num % 2 != 0)  // retorna apenas os números ímpares // returns only the odd numbers
 
 // return if true
 
-/*
 
-if(true){
-    return
-}
 
-*/
+//if(true){
+//    return
+//}
+
+
 
 console.log(newNums_2)
 
-
+//-------------------------------------------------------------------------------------------------//
 //REDUCE: funciona da mesma maneira que o MAP, porém, ele irá reduzir o array a apenas 1 valor //
+//-------------------------------------------------------------------------------------------------//
 
 const sum = nums.reduce((acumulator, number) => acumulator + number , 0)
 
@@ -238,3 +244,5 @@ const sum = nums.reduce((acumulator, number) => acumulator + number , 0)
 //reduce(function, valor inicial)
 
 console.log(sum)
+//-------------------------------------------------------------------------------------------------//
+*/
