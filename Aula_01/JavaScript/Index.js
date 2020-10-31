@@ -234,7 +234,7 @@ const newNums_2 = nums.filter(num => num % 2 != 0)  // retorna apenas os número
 console.log(newNums_2)
 
 //-------------------------------------------------------------------------------------------------//
-//REDUCE: funciona da mesma maneira que o MAP, porém, ele irá reduzir o array a apenas 1 valor //
+//REDUCE: funciona da mesma maneira que o MAP, porém, ele irá reduzir o array a apenas 1 valor //  works in the same way as MAP, however, it will reduce the array to just 1 value //
 //-------------------------------------------------------------------------------------------------//
 
 const sum = nums.reduce((acumulator, number) => acumulator + number , 0)
