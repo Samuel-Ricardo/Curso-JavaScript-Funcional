@@ -183,6 +183,7 @@ const person = {
 
 const person2 = {  
     ...person,
+    name: "James",
     sobreNome: 'pietro',
 }
 
