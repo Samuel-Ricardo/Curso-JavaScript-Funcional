@@ -253,26 +253,51 @@ console.log(sum)
 
 const val = true
 
-const stop_1 = new Promise((resolve,reject) => {
+const stop_1 = new Promise((resolve,reject) => {  //OBJECT
 
     setTimeout(()=>{
 
-        console.log(1)
+            console.log(1)
 
-        if(!val){
-            reject("Erro")
-            return
+            if(!val){
+                reject("Erro")
+                return
         }
 
-        setTimeout(()=>{
+            setTimeout(()=>{
 
-            console.log(2)
-            resolve('Fim')
+                console.log(2)
+                resolve('Fim')
+            },2000)
+
         },2000)
-
-    },2000)
 
 })
 
 stop_1.then(message => console.log(message)).catch(error => console.log(' ERR: ', error))
 
+const stop_2 = function(time){  //FUNCTION
+
+    new Promise((resolve,reject) =>{
+
+        setTimeout(()=>{
+
+            console.log(1)
+    
+            if(!val){
+                reject("Erro")
+                return
+            }
+    
+                setTimeout(()=>{
+        
+                    console.log(2)
+                    resolve('Fim')
+                },time)
+        
+            },2000)
+    })
+}
+
+
+stop_2.(3000).then(message => console.log(message)).catch(error => console.log(' ERR: ', error))
