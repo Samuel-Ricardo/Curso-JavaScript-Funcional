@@ -245,7 +245,7 @@ const sum = nums.reduce((acumulator, number) => acumulator + number , 0)
 
 console.log(sum)
 //-------------------------------------------------------------------------------------------------//
-*/
+
 
 //-------------------------------------------------------------------------------------------------//
 //PROMISE: executa um código de forma assincrona e quando a execuçao acabar ele retorna "reject"(erro) ou "resolve"(sucesso) 
@@ -277,9 +277,9 @@ const stop_1 = new Promise((resolve,reject) => {  //OBJECT
 stop_1.then(message => console.log(message)).catch(error => console.log(' ERR: ', error))
 //-------------------------------------------------------------------------------------------------//
 
-const stop_2 = function(time){  //FUNCTION
+ function stop_2 (time){  //FUNCTION
 
-    new Promise((resolve,reject) =>{
+    return new Promise((resolve,reject) =>{
 
         setTimeout(()=>{
 
@@ -300,7 +300,7 @@ const stop_2 = function(time){  //FUNCTION
     })
 }
 //-------------------------------------------------------------------------------------------------//
-stop_2.(3000).then(message => console.log(message)).catch(error => console.log(' ERR: ', error))
+stop_2(3000).then(message => console.log(message)).catch(error => console.log(' ERR: ', error))
 //-------------------------------------------------------------------------------------------------//
 
 //-------------------------------------------------------------------------------------------------//
@@ -313,7 +313,7 @@ Promise.all([stop_1,
 
 
 //-------------------------------------------------------------------------------------------------//
-// vai executar todas as promisses e exebir a mensagem da que terminar primeiro (exibe uma menssagen sempre que uma promisse for concluida)
+// vai executar todas as promisses e exebir a mensagem da que terminar primeiro
 //-------------------------------------------------------------------------------------------------//
 
 Promise.race([
@@ -321,7 +321,8 @@ Promise.race([
     stop_2(3000)
 ]).then(message => console.log('One Promise conpleted: '+ message))
   .catch(error => console.log(error))
-
+//-------------------------------------------------------------------------------------------------//
+*/
 
 
 
