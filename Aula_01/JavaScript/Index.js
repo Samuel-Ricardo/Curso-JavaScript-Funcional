@@ -211,3 +211,7 @@ const nums = [1,4,6,5,7,7,8,9,10]
 const newNums_1 = nums.map(num => num * 2)
 
 console.log(newNums_1)
+
+//FILTER: funciona da mesma forma que o MAP, porém, só retorna os valores que correspondem à condição, formando assim um filtro  //  it works in the same way as the MAP, however, it only returns the values ​​that match the condition, thus making a filter  //
+
+const newNums_2 = nums.filter(num => num % 2 != 0)  // retorna apenas os números ímpares // returns only the odd numbers
