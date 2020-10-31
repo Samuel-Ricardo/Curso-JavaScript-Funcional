@@ -336,13 +336,6 @@ Promise.race([
 
 
 //-------------------------------------------------------------------------------------------------//
-// Async & Await //: Métodos que facilitam a criação de Promises e funções assíncronas, evitando o "Callback Hell", e facilitando o entendimento e manutenção do código //
-/////////////////////////////////////////////////////////////////////////////////////////////////////
-// Async and Await //: Methods that facilitate the creation of promises and asynchronous functions, avoiding the "Callback Hell", and facilitating the understanding and maintenance of the code //
-//-------------------------------------------------------------------------------------------------//
-
-
-//-------------------------------------------------------------------------------------------------//
 // CallBack Hell //: Acúmulo de funções de Callback (funções que possuem funções como parâmetro) que acabam dificultando e/ou prejudicando a compreensão do código //
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 // CallBack Hell //: Accumulation of Callback functions (functions that have functions as a parameter) that end up hindering and/or impairing the understanding of the code //
@@ -356,8 +349,41 @@ stop(2000).then(() => {
     console.log('0-1')
         stop(3000).then(() =>{
             console.log('0-2')
-            stop(3000).then(() =>{
+            stop(4000).then(() =>{
                 console.log('0-3')
             })    
         })
 })
+
+//-------------------------------------------------------------------------------------------------//
+// Async & Await //: Métodos que facilitam a criação de Promises e funções assíncronas, evitando o "Callback Hell", e facilitando o entendimento e manutenção do código //
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+// Async and Await //: Methods that facilitate the creation of promises and asynchronous functions, avoiding the "Callback Hell", and facilitating the understanding and maintenance of the code //
+//-------------------------------------------------------------------------------------------------//
+
+async function exe_01() {  // funçao assincrona
+
+    await stop(2000)   // espera a execuçao acabar
+    console.log('1-1')
+    await stop(3000)   
+    console.log('1-2')
+    await stop(4000)   
+    console.log('1-3')
+}
+
+const exe_02 = async () => {  
+
+    try{
+        await stop(2000)   
+        console.log('2-1')
+        await stop(3000)   
+        console.log('2-2')
+        await stop(4000)   
+        console.log('2-3')
+    }catch{
+        console.log('Error')
+    }    
+}
+
+exe_01()
+exe_02()
