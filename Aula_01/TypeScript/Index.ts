@@ -77,7 +77,6 @@ const som = (x:number, y:number):number => x + y
 console.log(som(4, 7))
 
 //////////////////////////////////////////////////////////////////////////////////
-*/
 
 // Exemplo de funções Puras e Impuras  //  Example of Pure and Impure functions //
 
@@ -131,3 +130,19 @@ console.log(pureSum(10, 5))
 //-------------------------------------------------------------------------------------------------//
 //  It can be noted that regardless of the order in which the functions are executed, the result of one will not influence the other, thus having the expected results (Ex: 10 + 5 = 15) //
 //-------------------------------------------------------------------------------------------------//
+*/
+
+//  Pode Receber uma quantidade variavel e/ou infinita de parametros, transformando a variavel em um array com os valores // Can receive a variable and/or infinite number of parameters, transforming the variable into an array with the values //
+
+function sum (... num: number[]) {  
+
+    let result = 0;  //  quando recebe 0 reconhece o tipo automaticametne  //  when receiving 0 it recognizes the type automatically  //
+
+    for(var index = 0; index < num.length ; index++){
+
+        result += num[index]
+    }
+    return result
+}
+
+console.log(sum(1,10,5,4))
