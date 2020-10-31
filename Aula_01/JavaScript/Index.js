@@ -308,11 +308,19 @@ stop_2.(3000).then(message => console.log(message)).catch(error => console.log('
 //-------------------------------------------------------------------------------------------------//
 
 Promise.all([stop_1,
-            stop_2(1000)]).then(() => console.log('All Promises comleted'))
+            stop_2(3000)]).then(() => console.log('All Promises comleted'))
             .catch(error => console.log(error))
 
 
+//-------------------------------------------------------------------------------------------------//
+// vai executar todas as promisses e exebir a mensagem da que terminar primeiro (exibe uma menssagen sempre que uma promisse for concluida)
+//-------------------------------------------------------------------------------------------------//
 
+Promise.race([
+    stop_1,
+    stop_2(3000)
+]).then(message => console.log('One Promise conpleted: '+ message))
+  .catch(error => console.log(error))
 
 
 
