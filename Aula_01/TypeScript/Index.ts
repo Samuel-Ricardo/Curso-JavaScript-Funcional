@@ -132,6 +132,9 @@ console.log(pureSum(10, 5))
 //-------------------------------------------------------------------------------------------------//
 */
 
+//-------------------------------------------------------------------------------------------------//
+//REST//
+
 //  Pode Receber uma quantidade variavel e/ou infinita de parametros, transformando a variavel em um array com os valores // Can receive a variable and/or infinite number of parameters, transforming the variable into an array with the values //
 
 function sum (... num: number[]) {  
@@ -146,3 +149,39 @@ function sum (... num: number[]) {
 }
 
 console.log(sum(1,10,5,4))
+//-------------------------------------------------------------------------------------------------//
+//SPREAD//
+
+interface IPerson {
+    name: string,
+    age: number
+}
+
+const person: IPerson = {
+    name: 'Felipe',
+    age: 14
+}
+
+// pode herdar e/ou sobrescrever os atributos e valores do objeto person  // can inherit and/or overwrite the attributes and values of the person object  //
+
+
+const person2: {
+
+    //  person2 criou sua propia interface  //  person2 created his own interface  //
+
+    name: string,
+    age: number,
+    sobreNome: string
+
+} = {  
+    ...person,
+    sobreNome: 'pietro',
+}
+
+console.log(person2)
+
+const numbers: number[] = [1,5,4,8,9]
+const numbers2: number[] = [...numbers,2,3] //mesclar os array
+
+console.log(numbers2)
+//-------------------------------------------------------------------------------------------------//

@@ -156,7 +156,7 @@ console.log(pureSum(10, 5))
 
 // REST
 
-// Pode Receber uma quantidade variavel e/ou infinita de parametros, transformando a variavel em um array com os
+//  Pode Receber uma quantidade variavel e/ou infinita de parametros, transformando a variavel em um array com os valores // Can receive a variable and/or infinite number of parameters, transforming the variable into an array with the values //
 
 function sum (... num) {  
 
@@ -179,7 +179,7 @@ const person = {
     age: 14
 }
 
-// pode herdar e/ou sobrescrever os atributos e valores do objeto person
+// pode herdar e/ou sobrescrever os atributos e valores do objeto person  // can inherit and/or overwrite the attributes and values of the person object  //
 
 const person2 = {  
     ...person,
