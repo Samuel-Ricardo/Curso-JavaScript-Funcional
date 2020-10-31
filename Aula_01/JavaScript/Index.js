@@ -215,3 +215,26 @@ console.log(newNums_1)
 //FILTER: funciona da mesma forma que o MAP, porém, só retorna os valores que correspondem à condição, formando assim um filtro  //  it works in the same way as the MAP, however, it only returns the values ​​that match the condition, thus making a filter  //
 
 const newNums_2 = nums.filter(num => num % 2 != 0)  // retorna apenas os números ímpares // returns only the odd numbers
+
+// return if true
+
+/*
+
+if(true){
+    return
+}
+
+*/
+
+console.log(newNums_2)
+
+
+//REDUCE: funciona da mesma maneira que o MAP, porém, ele irá reduzir o array a apenas 1 valor //
+
+const sum = nums.reduce((acumulator, number) => acumulator + number , 0)
+
+// Vai retornar a soma de todos os valores do array // Will return the sum of all values in the array //
+
+//reduce(function, valor inicial)
+
+console.log(sum)
